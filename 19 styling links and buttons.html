@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors and more designing</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            background-color: rgb(108, 238, 108);
+            padding: 34px;
+            margin: 34px auto;
+            width: 650px;
+            border-radius: 25px;
+        }
+        a{
+            text-decoration: none;    /* default line aauxa text tala, yo garesi aaudaina  xD */
+        }
+        a:hover{
+            color: aqua;     /* yesle chai point garda text color change hunxa*/
+            background-color:rgb(235, 252, 1);   /* as you guessed, yes background change hunxa tyo padding ko xD */
+        }
+
+        a:visited{
+
+            color: yellow;  /* link visit garesi yo yellow dekhauxa hai*/
+        }
+
+        a:active{
+            background-color: darkblue;  
+
+        }
+
+        .btn{
+            background: rgb(202, 38, 71);
+             padding: 4px; 
+             border: none;
+             cursor: pointer;
+             font-size: 13px;
+             border-radius: 14px;
+             font-weight: bold;
+        }
+        .btn:hover{
+            color: darkgoldenrod;
+            background-color: rgb(235, 252, 1);
+            border: 2px solid brown;
+        }
+    </style>
+</head>
+<body> 
+    <div id="cont1" class="container">
+        <h3> This is my heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, adipisci tenetur. Impedit quidem doloribus repellendus laboriosam asperiores sed est unde eligendi, veniam nam suscipit nisi fugiat repellat, nulla ullam commodi, tempore voluptatibus! Deleniti, dolore.</p>
+
+        <a href="https://www.google.com" class="btn"> Read more</a>  
+        <!-- https halena bhane chaldaina hai muji   -->
+        <!-- for a button -->
+        <button class="btn"> Contact us</button>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Interaction using alert, confirm and prompt</title>
+</head>
+<body>
+
+    <div class="container" style="font-size: 2rem; color: blue;">
+        This is a page.
+    </div>
+
+
+    <!-- JAVASCRIPT  -->
+    <script>
+
+        // ALERT //
+
+        // Alert in in-browser JacaScript
+        // --> This is a message that pop ups in the browser . It doesnot return anything
+
+        // alert("This is a message!");
+
+
+        // PROMPT //
+
+        // --> Takes input from the user 
+        let name = prompt("What is your name?",'Guest');            // 'Guest is default text'
+        console.log(name);
+
+
+
+        // CONFIRM //
+
+        // --> to delete item, or give warning to the user, to double check
+        
+        let deletePost = confirm("Do you really want to delete this post?");             // if clicked ok it gives true else false
+        // console.log(deletePost);
+
+        if(deletePost){
+            // code to delete the post
+            console.log("Your post has been deleted successfully.");
+        }
+        else{
+            // code to cancel the deletion of the post
+            console.log("Your post has not been deleted.");
+        }
+       
+
+
+    </script>
+    
+</body>
+</html>

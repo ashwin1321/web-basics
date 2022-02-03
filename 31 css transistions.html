@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions in CSS</title>
+    <style>
+        #box{
+            border-radius: 9px;
+            display: flex;
+            height: 200px;
+            width: 200px;
+            background-color: violet;
+            justify-content: center;
+            align-items: center;
+            transition-property: background-color;   /* k ma garxas muji transition tyo lekhne ho */
+            transition-duration: 1.5s;     /* hover garda transition 2 sec lagxa huna lai aanandale */ 
+            transition-timing-function: ease-in;    /* suru ma slow hunxa ani fast */
+
+            /* transition-delay : 2s ;    /* transition x second le delay hunxa */
+
+            /* TRANSITION SHORTHAND */
+            /* transition: transition-property transition-duration transition-timimg-function transition-delay */
+
+            /* transition: background-color 1s ease-in 1s; */
+             transition: all 1s ease-in .3s;     /* all le sabai lai transition gardinxa */
+            
+
+
+
+        }
+        #box:hover{
+            background-color: cyan;
+            height: 400px;
+            width: 400px;
+            border-radius: 40px;
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>This is CSS Transition.</h3>
+    <diuv class="container"></diuv>
+        <div id="box">
+            This is my box.
+
+        </div>
+</body>
+</html>
+
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, neque, libero itaque ipsum, ad ullam dicta porro assumenda doloremque voluptas minus in optio modi nesciunt ex quo. Nobis ipsa, quia facere minus est quas earum vero quae reprehenderit placeat. Ea officiis suscipit dolore autem perferendis nulla facilis doloribus illum consectetur, vel cum voluptates in quos. Id, nisi quam suscipit consectetur, saepe ex cum aperiam provident expedita iusto quos doloremque nostrum optio sit quisquam inventore voluptates eum molestiae consequatur quia ut? Est dolore amet ad rerum, sapiente nemo harum autem, perferendis culpa nam laudantium iste cumque! Corrupti magnam, amet placeat dolorem itaque modi quisquam nisi voluptates impedit necessitatibus aut ab aspernatur doloribus nobis officiis temporibus aliquid ullam deleniti autem voluptatibus dolorum maiores. Magni, nam ipsum perspiciatis sed ad sint consectetur, nihil rerum inventore corporis quas. Alias molestias laborum praesentium provident repellat! Ipsa perferendis fugit accusamus ea quam deleniti asperiores. Eos mollitia ab aspernatur labore, incidunt voluptatem nulla quaerat tempora sunt veritatis suscipit velit necessitatibus eligendi dolorem, aperiam cumque officia numquam minima aliquid facere, unde fugit laboriosam itaque. Distinctio unde enim iure. Consequatur voluptatem quaerat culpa hic quia tempore itaque, sit architecto impedit at veniam, cum aspernatur ipsa laboriosam maiores explicabo eum.

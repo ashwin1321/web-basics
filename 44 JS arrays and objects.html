@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Arrays and Objects</title>
+</head>
+<body>
+    <div class="container">This is Array and object.</div>
+
+
+     <!-- JAVASCRIPT  -->
+    <script>
+
+        // Primitive datatypes
+        let myVar = 34;        //number(includes both integer and floating point)
+        let myVar1 = 'String';  //string
+        let myVar2 = true;  //boolean
+
+        // let myVar4 = Null; //or Undefined;  // if no value in variable
+
+        // Except from primitive, its Object 
+        // Almost everything in JavaScript is an object
+
+        // object are variables too, nut it contains many values:   object values are written as (name : value)
+        let employee = {
+            name: 'Ashwin',
+            salary: '10',
+            address: 'Maitidevi'
+        };
+        console.log(employee);
+        console.log(employee.name);           // accessing the value in the object
+        console.log(employee["salary"]);            // accessing the value in the object
+        
+
+        // Array
+
+        // let names = [1,2,4,'Ashwin',undefined];                    // any type of data can be added in array in javascript
+
+        let names = new Array(1,2,4,'Ashwin',undefined);                    // array can be created like this also
+
+        names.push("Pushed_item");                     // adding item in array
+        console.log(names);
+        names.pop();                                // pops the item in the top of the stack
+        console.log(names);
+
+        let abc = new Array(23)                  // yesle 23 ota empty item banauxa yo array ma
+        console.log(abc)
+
+
+    </script>
+    
+</body>
+</html>

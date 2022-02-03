@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating rows and gaps in grid.</title>
+    <style>
+
+        .grid{
+            display: grid;
+            grid-template-rows: 1fr 3fr 4fr ;  /* row height dinxa yesle jati ota diyo tei ota ma matra hunxa */
+            grid-auto-rows: auto;
+            grid-gap: 2fr;                     /* dedicated height nadeko ma yo apply hunxa */
+            grid-template-columns: 1fr 3fr 2fr;
+            grid-gap: 1rem;
+             
+
+        }
+
+        .box{
+            background-color: cyan;
+            border: 2px solid violet;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="box">This is box-1</div>
+        <div class="box">This is box-2</div>
+        <div class="box">This is box-3</div>
+        <div class="box">This is box-4</div>
+        <div class="box">This is box-5</div>
+        <div class="box">This is box-6</div>
+    </div>
+    
+</body>
+</html>

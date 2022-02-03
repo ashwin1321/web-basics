@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables and Custom Properties</title>
+    <style>
+        :root{
+            --box-color:cyan;           /* this is global variabel */
+            --maxw: 333px;
+        }
+        .box{
+
+            --box-color: violet;              /* making a variable */ /* This is a local Variable */
+            width: 200px;
+            height: 200px;
+            background-color: var(--box-color);     /* to use variable we write var(var_nmae */
+            border: 2px solid red;
+            box-shadow: 3px 3px 25px var(--box-color);
+            margin: 2px 9px;
+            
+        }
+        .container{
+            max-width: var(--maxw) ;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--box-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>    
+</body>
+</html>

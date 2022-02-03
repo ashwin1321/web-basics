@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        /* *{
+            margin: auto;
+            padding: auto
+            ; */
+      
+        .navbar {
+            background-color: rgb(53, 45, 45);
+            border-radius: 40px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+            /* tala list style none huda tyo red color aaudaina, tesaile yo garyo bhane aauxa background-color */
+            
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            padding: 3px;
+            margin: 13px 20px;
+        }
+
+        .navbar li a {
+            padding: 3px 3px;
+            text-decoration: none;
+            /* it removes underline from href used below */
+          color: white;
+        }
+
+        .navbar li a:hover {
+            color: red;
+            border-radius: 4px;
+        }
+
+        .search {
+            float: right;
+            padding: 15px 30px;
+            color: white;
+
+        }
+
+        .navbar input {
+            border-radius: 20px;
+            border-color: 15px red;
+            padding: 3px 4px;
+            color: black;
+
+        } 
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+
+                <div class="search">
+                    <input type="text" name="search" id="Search" placeholder="Search this website">
+                    <!-- search bar ko lagi -->
+                </div>
+            </ul>
+
+
+        </nav>
+    </header>
+
+</body>
+
+</html>

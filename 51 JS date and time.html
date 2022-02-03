@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Date and Time</title>
+</head>
+
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        padding: 25px;
+        font-size: 23px;
+        background-color: violet;
+        /* border: 2px solid violet; */
+       
+        margin :3px ;   
+        color: white;
+        font-weight: bold;
+    }
+    #time{
+        font-weight: bold;
+}
+
+</style>
+<body>
+    <div class="container">
+        <!-- This is a container -->
+        current time is&nbsp;<span id="time"></span>
+    </div>
+
+
+
+
+    <script>
+        console.log('This is Date and Time.');
+
+        let now = new Date();              // yesle current date ra time bhanxa
+        console.log(now);
+
+        let dt = new Date(0);          // Date(0) gives the reference time, same as epoch time in python      
+
+        let dt1 = new Date(10000);          // Date(x) gives time after x milisecond of the reference time    
+        console.log(dt);
+        console.log(dt1);
+
+
+        let newdate = new Date('2022-07-17');          // Date('x'), x date ko day date time print garxa
+        console.log(newdate);
+
+        // let newdate1 = new Date(year, month, date, hours, minutes, seconds, miliseconds);     
+        let newdate1 =  new Date(2028,08,08,2,30,23);   // ya bhako lai date time ma print garxa  
+        console.log(newdate1);
+
+        let yr = newdate1.getFullYear();
+        console.log(`the year is ${yr}`);
+
+        let dte  = newdate1.getDate();
+        console.log(`the date is ${dte}`);
+
+        let month = newdate1.getMonth();
+        console.log(`the month is ${month}`);
+
+        let hours = newdate1.getHours();
+        console.log(`the hour is ${hours}`);
+        // same can be done with minutes, seconds, day, etc.
+
+        newdate1.setDate(15);           // date update garxa
+         // same goes with minutes, hours, etc. 
+        console.log(newdate1);
+
+        console.log(Date.now());        // reference time (same like epoch time in py) dekhi aaile sammko milisecond dekhuxa
+       
+
+        setInterval(updateTime, 1000);
+        
+        function updateTime(){
+            time.innerHTML = new Date();
+        }
+
+        
+ 
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScripy | Setintervals and SetTimeOuts</title>
+</head>
+<body>
+    <div class="container">
+        Time now is <span id="time"></span>
+    </div>
+
+
+
+    <!--                                                    javaScript                                                    -->
+
+
+    <script>
+        console.log("This is javaScript SetIntervals and SetTimeOuts! ");
+
+        //                  SET TIMEOUTS              //
+
+    // SetTimeout --> This allows us to run the function once after the interval of Time
+    // ClearTimeout --> This allows us to run the function repeatedly after the interval of time
+
+    function greet(name){
+        console.log(`Hello, good morning ${name}`);
+    }
+    // setTimeout(greet, 2000);               // here we write time in the form of miliseconds here 5000ms = 5 sec
+    timeout = setTimeout(greet, 4000,"Ashwin");     // here 1st parameter is function, second is timer and 3rd is the parameter of 1st parameter fxn
+    // we can pass multiple arguments inside of a function in settimeout
+    console.log(timeout);
+
+    clearTimeout(timeout);             // settimeout ma deko time paxi pani tyo message dekhidaina yo use garda
+ 
+
+    // setTimeout(greet(), 5000); --> Wrong, as it is calling the function inside the settimeout 
+
+
+
+    //                SET INTERVALS              //
+
+    // given interval of time ma run bhairakhxa tei kura 
+
+    // interval = setInterval(greet, 1000, 'Ashwinnnn');         // same syntax as settimeouts   
+    // console.log(interval);
+
+    // clearInterval(interval);            // same as cleartimeout
+
+
+    
+    function displayTime(){
+        time = new Date();
+        console.log(time);
+        document.getElementById('time').innerHTML = time;
+    }
+
+    setInterval(displayTime, 1000);
+    </script>
+</body>
+</html>

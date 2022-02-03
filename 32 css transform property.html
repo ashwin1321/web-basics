@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Property</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            height: 80vh;
+            width: 100vw;
+            background-color: burlywood;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            
+            }
+        .box{
+            display: flex;
+            background-color: rgb(187, 62, 62);
+            border: 2px solid black;
+            border-radius: 8px;
+            height: 400px;
+            width: 400px;
+            justify-content: center;
+            align-items: center;
+           /*transform: rotate(45deg);      /* to transform the item in certain degree */
+           transition: all 2.5s ease-in-out;
+           box-shadow: 7px 7px 25px 2px rgb(65, 175, 175);
+    
+        }
+        .box:hover{
+            transform: rotate(360deg);
+           /* transform: skew(45deg);    /* chepto banauxa item lai */
+           /*transform: scale(2);           /* x times scale hunxa or badxa */
+           transform: translateX(200px);    /* translate garxa diyeko axis ma */
+           transform: translate(200px,200px); /* duitai axis ma translate garna yo use garne hai ta. tata bye bye */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box.
+       
+    </div>
+    
+</body>
+</html>

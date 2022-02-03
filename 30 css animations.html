@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes and Animations</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: violet;
+        }
+
+        .box{
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            background-color: cyan;
+            position: relative;
+            animation-name: ashwin2;      /* giving a animation name */
+            animation-duration: 3s;       /* animation time */
+            animation-iteration-count: 1; /* how many times to run the animation*/
+            /*animation-iteration-count: infinite; /* animation runs for the infinite times*/
+
+            animation-fill-mode: forwards;  /* animation jata pugxa tei rokinxa last ma */
+            /* animation-fill-mode: alternate;  /* animation jata pugxa tya bata feri 1st place ma farkinxa */
+            
+            /*animation-timing-function: ease-in;   /* ease-in le chai animation suru ma slow ma hunxa ani ekassi baulauxa ani chito hunxa */
+          animation-timing-function: ease-out;   /* ease-out le chai animation suru ma fast hunxa ani slow hudai jaanxa */
+            animation-timing-function: ease-in-out;  /* yesle chai suru ma slow bich ma feri baulauxa ani feri slow */
+
+            /* animation-delay: 2s;    /* x second paxi animation suru hunxa */
+            
+            animation-direction: forward;    /* ulto side bata animation hunxa */ 
+
+            /* ANIMATION SHORTHAND */
+            /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count animation-fill-mode; */
+            
+            /* animation: ashwin2 5s ease-in 2s 1 forwards; */
+
+        }
+
+        @keyframes ashwin2{            /* we can define animation in this way as well */
+            0%{                  /* works if there's 0% animation */
+            top: 250px;
+            left: 0px;
+
+            
+            }
+            25%{                /* works if there's 25% animation */
+            top: 250px;
+            left: 250px;
+
+
+            }
+            75%{               /* works if there's 75% animation */
+            top: 0px;
+            left: 250px;
+
+
+            }
+            100%{            /* works if there's 100% animation */
+            top: 0px;
+            left: 0px;
+
+
+            }
+
+        }
+
+        
+        @keyframes ashwin1{       /* defining the animation name. we can use this to create the required animation */
+
+            from{            /* start animation from the attributes in "from"*/
+                width: 200px;
+
+            }
+
+            to{               /* end the animation according to the given atribtes in "to" */
+                width: 700px;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box.
+        </div>
+    </div>
+    
+</body>
+</html>

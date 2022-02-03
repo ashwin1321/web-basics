@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Scope, if-else Conditionals and Switch case</title>
+</head>
+<body>
+    <div class="container">
+        
+    </div>
+    
+
+    <script>
+
+        var string1 = "This is a string1.";
+        console.log(string1);
+
+        // like var we can use 'let' which is block defined, means if use it inside a block it works only within the block if outside the block cannot be overriden overriden 
+        let a = 3;
+         a = 'text';           
+
+        {                          
+            let a = 6;             // here this a is defined only inside this block {} only.  This block can be conditional block or a function block or only plain block {}
+            console.log(a);        // it prints 6
+        }
+    
+        console.log(a);           // it prints 3
+
+
+
+
+
+        // CONSTANTS //
+
+        const b = 'This is a constant';         // const cannot be changed not even inside the block
+        console.log(b);
+
+
+
+        // CONDITIONALS //
+
+        let age = 5;
+        if(age>18){
+            console.log('You can drink Alcohol');
+        }
+        else if(age==15){
+            console.log('Gayera sut Nibba Mug');
+        }
+        else{
+            console.log("Drink water Biatch!");
+        }
+
+        // SWITCH 
+
+        const cups = 45;
+        switch (cups) {
+            case 4:
+                console.log('The value of cup is 4.')
+                break;
+            case 41:
+                console.log('The value of cup is 41.')
+                break;
+            case 42:
+                console.log('The value of cup is 42.')
+                break;
+        
+            default:
+                console.log("The value of cups is none of 4, 41 or 42.")
+                break;
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>  
+    <style>
+        .container{
+            text-align: center;
+            height: 545px;
+            width: 100%;
+            border: 2px solid black;
+            display: flex; 
+            /* flex is applicable in all its inherit class until the inherited class has its own attributes   */
+
+            /* FLEX PROPERTIES FOR FLEX CONTAINER  */
+            /* default value is row  */
+            flex-direction: row;            /* sabai item lai eauta row ma rakhxa*/
+            /*
+            flex-direction: column;        /* sabai item lai eauta column ma rakhxa 
+            flex-direction: row-reverse;        /* item harulai ulto tira bata row banauxa   
+            flex-direction: column-reverse;        /* item harulai ulto tira bata column banauxa    */
+
+            flex-wrap: wrap;             /* it wraps the items as screen shrinks*/
+            /* flex-wrap: wrap-reverse;     */
+
+           /* flex-flow: row-reverse wrap;     yo garda flex-direction ra flex-wrap ekai choti set garna milxa */
+
+           justify-content: center;         /* content lai center ma leraauxa */
+           justify-content: space-between;  /* boxes haru ko bich ma barabar space gardinxa tara agadi paxadi space didaina*/
+           justify-content: space-evenly;   /*box ko front end middle sabai tira barabar space gardinxa*/
+           justify-content: space-around;   /* box ko front ra end ma box bich ko space ko adhi space hunxa  */
+
+           align-items: center;             /* items harulai vertically center gardinxa */
+           align-items: flex-end;           /* items harulai tala lanxa*/
+           align-items: flex-start;           /* items harulai mathi lanxa i.e default thau ma*/
+           align-items: stretch;  
+
+        }
+        .item{
+            width: 200px;
+            height: 150px;
+            background-color: tomato;
+            border: 2px solid rgb(47, 27, 221);
+            margin: 10px;
+            padding: 3px;
+        }
+
+        #item-1{
+            /* flex properties foe a flex item  */
+
+            order: 0;               /* to place item in desired in order. heiger the order, later it shows up in the container*/
+
+            flex-grow: 0;           /* tyo item le given no of space linxa. here 2 ota box ko thau khaidinxa yo item-1 mug le*/
+            flex-shrink: 0;
+            
+        }
+        #item-2{
+            /* flex-grow: 3;
+            flex-shrink: 3; */
+            
+            flex-basis: 220px;     
+            /* when flex direction is said to row flex-basis: will control width: ;
+            when flex direction is said to column flex-basis: will control height : ;
+             */
+        }
+
+        #item-3{
+            /* flex: (flex-grow) (flex-shrink) (flex-basis) */
+            flex: 2 2 344px;
+            
+            align-self: flex-start;   /* default thau nai ho mg ko*/      
+            align-self: flex-end;                   /* last row ma gayera basxa */
+            align-self: center;             /*  center ma aayera basxa */
+
+        }
+    </style>
+</head>
+<body>
+    <h3>This is a Flexbox</h3>
+    <div class="container">
+        <div class="item" id="item-1">First Box</div>
+        <div class="item" id="item-2">Second Box</div>
+        <div class="item" id="item-3">Third Box</div>
+        <!-- <div class="item" id="item-4">Fourth Box</div>
+        <div class="item" id="item-5">Fifth Box</div>
+        <div class="item" id="item-6">Sixth Box</div> -->
+    </div>
+</body>
+</html>

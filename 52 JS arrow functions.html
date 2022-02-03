@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Arrow Functions</title>
+</head>
+<body>
+    <div class="container">
+        This is arrow function.
+    </div>
+
+
+    <script>
+
+        // ARROW FUNCTION 
+        // --> It is just shortcut
+
+
+        // function greet(){            
+        //     console.log("Good Morning");
+        // }
+
+        // This can also be written as 
+        let greet = ()=> {            
+            console.log("Good Morning");
+        }
+
+        greet();
+
+        // let sum = (a,b) => {
+        //     return a+b;
+        // }
+        
+        let sum = (a,b) => a+b;    // can also be written like this
+
+        // we dont need to use parenthesis for single argument. if no argument then use empty parenthesis
+        let half =  a => a/2;
+        
+
+
+        // arrow function can also be seen inside set timeout function
+
+        setTimeout(() => {
+            console.log("We are inside settimeout");
+        }, 3000);
+
+
+        let obj1 ={
+            greeting : 'Good Morning',
+            names : ['Ashwin','Ash','Win'],
+            speak(){
+                this.names.forEach((student) => {          // this le yo object bhitra ko x lai point garxa
+                    console.log(`Hey hey hey! ${this.greeting} ${student}`);
+
+                    // arrow function bhitra this.x le tyo object ko element khojxa tara if there was function, function bhitra ko lai matra herxa 
+                    
+                });
+            }
+        }
+        obj1.speak();
+         
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | String Functions</title>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    
+
+
+
+    <!-- JAVASCRIPT  -->
+    <!-- STRING FUNCTIONS -->
+
+    <script>
+        var str = "Thf is is is a string";
+        console.log(str);
+
+        // first occurence of a substring
+        var position = str.indexOf('is');       //Kun index ma yo string suru xa tyo output dinxa 
+        console.log(position);
+
+        // last occurence of a substring
+        position = str.lastIndexOf('is');     // eautai item or tyo element xa bhane last occuring position dinxa 
+        console.log(position);
+
+        // substring from a string  // SLICING
+        var substr1 = str.slice(1,5);      // slice(x,y) ma x include garxa ra y position lai print gardaina
+   
+        //var substr = str.substring(1,5);   // substring le slice jastai kaam garxa
+        // Slice le chai -ve value ni linxa tara substring le chai lidaina
+        console.log(substr1)
+
+
+        var replaced = str.replace('string','Ashwin');     // string bhitra ko item lai replace garxa .replace("x",'y'): desired string bhitra ko x element lai y le replace garxa
+        console.log(str);
+        console.log(replaced);
+
+
+        // UPPER CASE LOWER CASE //
+         console.log(str.toUpperCase());       // string lai sabai upper case ma lanxa
+        console.log(str.toLowerCase());       // string lai sabai lower case ma lanxa
+        
+        // CONCADE A STRING TO A EXISTING ONE //
+        var newstr = str.concat(" Wassap");      // str bhanne ma ya deko string paxadi add garxa
+        // + operator le ni yestai kaam garxa garna ta
+        console.log(newstr)
+
+
+        // TRIM //
+        var whitespace = '        This is a              whitespace      ';
+        console.log(whitespace);
+        console.log(whitespace.trim())           // Yesle string ko agadi ra paxadi ko white space lai remove garxa tara middle ko chai remove gardaina
+ 
+
+        // RETURNING THE CHARACTERS IN A STRING //
+ 
+        var char3 = str.charAt(2);              // charAt(x): x index ma bhako character lai return garxa
+        console.log(char3);
+
+        //not very important
+        var char3 = str.charCodeAt(2);              // charAt(x): x ko character code dinxa. UTF 16 ko code
+        console.log(char3);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!-- DOM stands for Document Object Module.   Its bascially the html file -->
+<!-- We can access the html attributes in the form of tree through javascript  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Navigating the DOM</title>
+</head>
+<body>
+    <div id="main" class="container">
+        <ul id="nav">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact US</li>
+        </ul>
+       
+    </div>
+    <div class="container">
+        Another contianer
+    </div>
+</body>
+
+
+<script>
+
+let main = document.getElementById('main');               // we can access the elements in the id main
+console.log(main);
+
+let nav = document.getElementById('nav');
+console.log(nav);
+
+console.log(nav.innerHTML);                    // we can see the attributes and all inside a id nav
+
+nav.innerHTML = "<li>Dynamic Programming</li>";          // we can change the elements inside a id in this way
+
+
+let containers = document.getElementsByClassName("container");         // access the element inside a class
+console.log(containers);                  // lists out all the classes with that name
+console.log(containers[0]);                  // returns the class container at [0] position 
+
+
+// we can use css selector to select elements 
+
+let sel = document.querySelector('.container');
+console.log("selector returns ", sel);                     // returs first class of name container
+
+let se = document.querySelector('#nav>li');                // nav bhitra ko li lai select garxa
+
+
+
+
+let sela = document.querySelectorAll('.container');           // queryselector le 1st item matra dinxa but queryselectorAll le sabai item
+console.log("selector returns ", sela);
+</script>
+
+
+</html>

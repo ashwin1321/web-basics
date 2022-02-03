@@ -1,0 +1,79 @@
+<!-- Events means signal. when we click we see something is happening and that can be called as events.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Events and Listening of Events</title>
+</head>
+<style>
+    #btn{
+        padding: 10px;
+        background-color: rgb(25, 129, 129);
+        border: 2px solid black;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <!-- Browers events:
+    click
+    contextmenu  (right click gara hunxa)
+    mouseover/ mouseout        // kunai element bata bahira/bhitra niskyo mouse bhane
+    mousedown/mouseup          // mouse ko button press garda
+    mousemove 
+    
+
+    submit
+    focus 
+    
+    DOMcontentloaded        // html ko sabai content load bhayepaxi yo fire hunxa
+
+    transitionend and all -->
+  
+
+    <div class="container">
+        <h1>This is my heading</h1>
+
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam molestias assumenda fugiat delectus in repellat dolore doloremque qui consequuntur at? Sit unde voluptates corporis atque! Est dicta illum doloribus alias minus? Quae facere non incidunt sunt libero blanditiis, impedit doloremque facilis unde molestiae a saepe tempore accusamus, ad repudiandae, dolorem accusantium magni maxime autem delectus ducimus vero assumenda hic. Eaque, eius labore consequatur omnis quae, eum ducimus est corrupti esse ipsam at. Voluptas, voluptatem? Quibusdam cumque sequi quam. Ipsum modi tempore quo dolores, minus corporis impedit excepturi nam inventore doloremque? Blanditiis nisi, asperiores nemo ab aperiam rem nihil doloribus. Commodi ad praesentium molestias provident beatae quidem vero eius! Commodi, sit dolores molestiae fugiat nesciunt autem. Quidem eius sit temporibus quo, pariatur animi ipsum repudiandae placeat esse eligendi debitis et excepturi! Itaque inventore rerum harum, odit sit exercitationem voluptas voluptatum? Nisi dicta alias dolorum consequuntur ab ducimus, temporibus eius dolores iusto?</p>
+    </div>
+    <button id="btn" onclick="togglehide()">Show/Hide</button>  
+            <!-- 'on'+'event_name' = "function_name()"-->
+    <!-- oneclick is the pointer, pointing the function in our js -->
+    
+    <script>
+
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run(){                   // para bhanne id ma mouse hover bho bhane tala ko statement run hunxa
+            console.log('mouse inside!')
+        });
+
+        para.addEventListener('mouseout', function run(){                   // para bhanne id ma mouse gayera bahira nikalyo bhane tala ko statement run hunxa
+            console.log('mouse now went Outside!')
+        });
+
+
+
+        function togglehide(){                  //whenever the item in btn is clicked this function runs
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if(para.style.display != 'none'){
+                para.style.display ='none' ;
+            }
+            else{
+                para.style.display = 'block';
+            }
+           
+        }
+
+
+    </script>
+    
+    
+
+</body>
+
+</html>      

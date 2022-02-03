@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS grid and Media Queries.</title>
+        <style>
+
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section aside' 
+            'footer footer footer footer' ;
+            
+        }
+         @media only screen and (max-width: 400px)               /* this is applicable, here the block is visible between 0-300 px resolution */
+        {
+            body{
+                background-color: red;
+            }
+            .container{
+            grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section section'  
+            'footer footer footer footer' ;
+            
+             }
+             aside{
+                 display: none;
+                 
+             }
+            span{
+                display: block;
+                text-align: center;
+                
+            }
+        }
+        @media (max-width: 700px) and (min-width: 400px)             /* this is applicable, here the block is visible between 300-500 px resolution */
+        {
+            body{
+                background-color: yellow;
+            }
+            .container{
+            grid-template-areas:
+            'navbar navbar navbar navbar'
+            'section section section section' 
+            'aside aside aside aside' 
+            'footer footer footer footer' ;
+            
+             }
+             span{
+                display: block;
+                text-align: center;
+                
+            }
+        }
+        @media (max-width: 1100px) and (min-width: 700px)             /* this is applicable, here the block is visible between 500-800 px resolution */
+        {
+            body{
+                background-color: green;
+            }
+        }
+        
+        @media (min-width: 1100px)            /* this is applicable, here the block is visible above 800 px resolution */
+        {
+            body{
+                background-color: violet;
+            }
+        }
+
+        .bdr{
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: wheat;
+        }
+        nav{
+            grid-area: navbar;
+
+        }
+        section{
+            grid-area: section;
+
+        }
+
+        aside{
+            grid-area: aside;
+        }
+        footer{
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container">
+
+            <nav class="bdr">
+                <span>Home</span>
+                <span>About Us</span>
+                <span>Contact Us</span>
+            
+            </nav>
+
+            <section class="bdr">
+                <h2>hei hei</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime obcaecati quae expedita, velit repellat deleniti accusamus blanditiis est, odio dolor non aliquid eum nemo ratione unde ut architecto recusandae quia facilis ad porro quis? Hic, ipsa vero. Odio maiores dignissimos ex dolor commodi laudantium asperiores doloribus obcaecati iste dicta numquam sint assumenda, sunt fugit accusantium repellat minus inventore ab optio corporis fuga pariatur! Voluptate odio laborum dolores earum laboriosam recusandae debitis reiciendis sapiente ducimus quis facilis, eligendi obcaecati, itaque dignissimos ea eveniet suscipit provident totam expedita? Autem quaerat ea consequatur fugiat quos nesciunt ullam iure necessitatibus, repellendus veniam, odio quo error animi illo deserunt blanditiis totam ipsa quasi rerum voluptatibus repudiandae dicta similique. Necessitatibus culpa fugiat excepturi. Aspernatur ducimus voluptatibus delectus molestiae id ut inventore voluptatum odit. Quidem debitis deleniti pariatur cupiditate at eius architecto dolore! Fugit vel cupiditate consectetur obcaecati error laudantium id veniam voluptates quod, incidunt hic repudiandae distinctio maiores maxime animi illum aspernatur at nostrum repellendus nobis porro temporibus nemo quasi facere. Voluptatibus nihil debitis minus autem unde. Repellat enim ex saepe molestiae reiciendis assumenda reprehenderit velit molestias laborum voluptatum praesentium exercitationem, dolorem explicabo expedita magnam totam distinctio consectetur, unde veniam, voluptatem debitis vel. Qui, aperiam veritatis.</p>
+            </section>
+            <aside class="bdr">
+                <h1> More about us</h1>
+            </aside>
+        </div>
+        <footer class="bdr">copyright Ashwin 2020</footer>
+
+    </body>
+</html>

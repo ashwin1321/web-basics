@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascripts | Strings and its methods</title>
+
+</head>
+<body>
+    <div class="container">
+        <h1>This is a heading.</h1>
+    </div>
+
+    <div id="abc"></div>
+
+
+    
+
+    <script>
+        var string = "This";    // 'Single ni use garda hunxa'
+        
+        var name = 'Ashwin';
+        var email = 'ashwinkh7@gmail.com'
+        var temp = `${name}`;
+        console.log(string + name + email);
+
+        console.log(`My name is ${name}`);    // works as f string in python
+
+        console.log(name.length);          // finding the length of string
+
+        // `` yo sign esc ko tala hunxa 
+
+        // escape sequence ta sabai ko same nai hunxa 
+
+
+        var y = new String("this");
+        console.log(y);
+
+        document.getElementById('abc').innerHTML = '<h3> this is an h3 heading </h3>'      // item add garna milxa abc bhanne id ma yeasri. same goes with the class
+
+    </script>
+
+
+</body>
+</html>
